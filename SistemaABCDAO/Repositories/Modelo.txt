@@ -1,0 +1,49 @@
+﻿//using DigitalDAO.Contrats;
+//using DigitalDAO.Entities;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using System.Data.SqlClient;
+//using System.Data;
+
+//namespace DigitalDAO.Repositories
+//{
+//    public class TblJsonPontalRepository : MasterRepository, ITblJsonPontalRepository
+//    {
+//        private string insert;
+
+//        public TblJsonPontalRepository()
+//        {
+//            insert = "INSERT INTO TBL_JSON_PONTAL VALUES (@ID_PONTAL,@TO_PONTAL,@MESSAGE_PONTAL,@SCHEDULE_PONTAL,@STATUS_PONTAL,@JSON_PONTAL)";
+//        }
+
+//        public int Add(TblJsonPontalDAO entity)
+//        {
+//            parameters = new List<SqlParameter>();
+//            parameters.Add(new SqlParameter("@ID_PONTAL", entity.idPontal));
+//            parameters.Add(new SqlParameter("@TO_PONTAL", entity.toPontal));
+//            parameters.Add(new SqlParameter("@MESSAGE_PONTAL", entity.messagePontal));
+//            parameters.Add(new SqlParameter("@SCHEDULE_PONTAL", entity.schedulePontal));
+//            parameters.Add(new SqlParameter("@STATUS_PONTAL", entity.statusPontal));
+//            parameters.Add(new SqlParameter("@JSON_PONTAL", entity.jsonPontal));
+//            return ExecuteNonQuery(insert);
+//        }
+
+//        public int Edit(TblJsonPontalDAO entity)
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public IEnumerable<TblJsonPontalDAO> GetAll()
+//        {
+//            throw new NotImplementedException();
+//        }
+
+//        public int Remove(int entity)
+//        {
+//            throw new NotImplementedException();
+//        }
+//    }
+//}

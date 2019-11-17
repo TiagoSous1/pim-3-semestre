@@ -1,0 +1,23 @@
+﻿<body>
+    <div class="panel">
+        <h1>Empresa</h1>
+        <br />
+        <div class="jumbotron">
+
+            <form method="get" action="~/Views/Home/Veículos.cshtml">
+                <h3>Razão</h3> <input class="input-sm" type="text" name="RazãoEmpresa" placeholder="Insira o Nome Empresa">
+                <h3>Código </h3><input class="input-sm" type="number" name="CodigoEmpresa" placeholder="Insira o Codigo da Empresa">
+                <h3>CNPJ</h3><input class="input-sm" type="number" name="CnpjEmpresa" placeholder="Insira o CNPJ">
+                <h3>Estado</h3><input class="input-sm" type="search" name="EstadoEmpresa" placeholder="Insira o UF">
+                <h3>Endereço</h3><input class="input-sm" type="text" name="EndereçoEmpresa" placeholder="Insira o Endereço">
+                <h3>Telefone</h3><input class="input-sm" type="tel" name="TelefoneEmpresa" placeholder="Insira o  Telefone"
+            </form>
+
+            <p><a id="btSalvarVeiculo" class="btn btn-primary">Salvar</a></p>
+            <br />
+            <p><a id="btEditarVeiculo" class="btn btn-primary">Editar</a></p>
+            <br />
+            <p><a id="btExcluir" class="btn btn-primary">Excluir</a></p>
+        </div>
+    </div>
+</body>

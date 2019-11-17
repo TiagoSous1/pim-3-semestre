@@ -1,0 +1,25 @@
+﻿<body>
+    <div class="panel">
+        <h1>Abastecimento</h1>
+        <br />
+        <div class="jumbotron">
+
+            <form method="get" action="~/Views/Home/Veículos.cshtml">
+                <h3>Código do Abastecimento </h3> <input class="input-sm" type="search" name="CodigoAbastecimento" placeholder="Insira o Codigo aqui">
+                <h3>Número IF </h3><input class="input-sm" type="number" name="CodigoIf" placeholder="Insira o Codigo da Infração">
+                <h3>Código Carro</h3><input class="input-sm" type="search" name="CodigoCarroAbastecimento" placeholder="Insiro o Código Carro">
+                <h3>Código Empresa</h3><input class="input-sm" type="search" name="EmpresaAbastecimento" placeholder="Insira o Codigo Empresa">
+                <h3>Data</h3><input class="input-sm" type="date" name="DataAbastecimento" placeholder="Insira a Data">
+                <h3>Preço R$</h3><input class="input-sm" type="number" name="PreçoAbastecimento" placeholder="Insira o Preço">
+                
+            </form>
+
+            <p><a id="btSalvarVeiculo" class="btn btn-primary">Salvar</a></p>
+            <br />
+            <p><a id="btEditarVeiculo" class="btn btn-primary">Editar</a></p>
+            <br />
+            <p><a id="btExcluir" class="btn btn-primary">Excluir</a></p>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,43 @@
+.estilo-menu{
+    color: #FEC63E;
+    border-bottom: 1px solid #FEC63E;
+
+}
+
+.estilo-brand {
+    color: #FEC63E;
+    text-align:center;
+    font-size: 30px;
+}
+
+.estilo-menu:hover {
+    color: #000;
+    font-style: bold;
+    background:  #FEC63E;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.centralizar {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    background: #FEC63E;
+    height: 50px;
+}
+
+footer p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.titulo {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-transform: uppercase;
+}

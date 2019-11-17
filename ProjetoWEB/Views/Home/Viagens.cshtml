@@ -1,0 +1,24 @@
+﻿<body>
+    <div class="panel">
+        <h1>Viagens</h1>
+        <br />
+        <div class="jumbotron">
+
+            <form method="get" action="~/Views/Home/Veículos.cshtml">
+                <h3>Código Viagem</h3> <input class="input-sm" type="number" name="CodigoViagem" placeholder="Insira o Codigo">
+                <h3>Código Motorista</h3><input class="input-sm" type="search" name="CodigoMotoristaViagens">
+                <h3>Data Viagem</h3><input class="input-sm" type="datetime" name="DataMultas" placeholder="Insira a Data">
+                <h3>CEP</h3><input class="input-sm" type=""name="Modelo" placeholder="Insira o Codigo Empresa">
+                <h3>Preço R$</h3><input class="input-sm" type="number" name="Modelo" placeholder="Insira o Preço">
+                <h3>Código da Barra</h3><input class="input-sm" type="file" name="Modelo" placeholder="Insira o Codigo de Barras aqui">
+                <h3>Descrição da Infração</h3><input class="input-sm" type="text" name="Modelo" placeholder="Digite aqui">
+            </form>
+
+            <p><a id="btSalvarVeiculo" class="btn btn-primary">Salvar</a></p>
+            <br />
+            <p><a id="btEditarVeiculo" class="btn btn-primary">Editar</a></p>
+            <br />
+            <p><a id="btExcluir" class="btn btn-primary">Excluir</a></p>
+        </div>
+    </div>
+</body>

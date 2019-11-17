@@ -1,0 +1,106 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DigitalDAO.Contrats;
+using DigitalDAO.Entities;
+using DigitalDAO.Repositories;
+using DigitalNegocio.ValueObjects;
+using System.ComponentModel.DataAnnotations;
+
+namespace DigitalNegocio.Models
+{
+    public class TblAnaliticoModel : IDisposable
+    {
+
+        private TblAnaliticoRepository TblAnaliticoRepository = new TblAnaliticoRepository();
+        public EntityState State { private get; set; }
+
+        //propriedades modelo de visita validar dados
+        public int idAnalytical { get; set; }
+        public string deLogin { get; set; }
+        public long cpfId { get; set; }
+        public float cash { get; set; }
+        public float? refin { get; set; }
+        public string wallet { get; set; }
+        public int idStatusPayment { get; set; }
+
+        public TblAnaliticoModel(string deLogin ,long cpfId, float cash, float? refin, string wallet, int idStatusPayment)
+        {
+            this.deLogin = deLogin;
+            this.cpfId = cpfId;
+            this.cash = cash;
+            this.refin = refin;
+            this.wallet = wallet;
+            this.idStatusPayment = idStatusPayment;
+        }
+
+        public TblAnaliticoModel()
+        {
+
+        }
+
+        public string SaveChanges()
+        {
+            string message = null;
+            try
+            {
+                TblAnaliticoDAO TblAnaliticoDataRepository = new TblAnaliticoDAO();
+                TblAnaliticoDataRepository.idAnalytical = idAnalytical;
+                TblAnaliticoDataRepository.deLogin = deLogin;
+                TblAnaliticoDataRepository.cpfId = cpfId;
+                TblAnaliticoDataRepository.cash = cash;
+                TblAnaliticoDataRepository.refin = refin;
+                TblAnaliticoDataRepository.wallet = wallet;
+                TblAnaliticoDataRepository.idStatusPayment = idStatusPayment;
+
+                switch (State)
+                {
+                    //Execulta reglas comerciais / calculos
+                    case EntityState.Add:
+                        TblAnaliticoRepository.Add(TblAnaliticoDataRepository);
+                        break;
+                    case EntityState.Modified:
+                        TblAnaliticoRepository.Edit(TblAnaliticoDataRepository);
+                        break;
+                    case EntityState.Delete:
+                        TblAnaliticoRepository.Remove(idAnalytical);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                message = ex.ToString();
+            }
+            return message;
+        }
+
+        public List<TblAnaliticoModel> GetAll()
+        {
+            var TblAnaliticoDataModel = TblAnaliticoRepository.GetAll();
+            var listTblAnalitico = new List<TblAnaliticoModel>();
+
+            foreach (TblAnaliticoDAO item in TblAnaliticoDataModel)
+            {
+                listTblAnalitico.Add(new TblAnaliticoModel
+                {
+                    idAnalytical = idAnalytical,
+                    deLogin = deLogin,
+                    cpfId = cpfId,
+                    cash = cash,
+                    refin = refin,
+                    wallet = wallet,
+                    idStatusPayment = idStatusPayment
+                });
+            }
+            return listTblAnalitico;
+        }
+
+
+        public void Dispose()
+        {
+
+        }
+    }
+}

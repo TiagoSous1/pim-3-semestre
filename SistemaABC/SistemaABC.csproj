@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1695790A-64F2-4FAB-AEEB-4F8A08E70EA8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaABC</RootNamespace>
+    <AssemblyName>SistemaABC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\OpenNewForm.cs" />
+    <Compile Include="Entities\ValidaCNH.cs" />
+    <Compile Include="Entities\ValidaDigitoCPF.cs" />
+    <Compile Include="ViewModel\Exibicao\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Cadastros\FrmCadAbastecimento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadAbastecimento.Designer.cs">
+      <DependentUpon>FrmCadAbastecimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadAluguel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadAluguel.Designer.cs">
+      <DependentUpon>FrmCadAluguel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadEntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadEntradaSaida.Designer.cs">
+      <DependentUpon>FrmCadEntradaSaida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadManutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadManutencao.Designer.cs">
+      <DependentUpon>FrmCadManutencao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadMotorista.Designer.cs">
+      <DependentUpon>FrmCadMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadMultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadMultas.Designer.cs">
+      <DependentUpon>FrmCadMultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadPecas.Designer.cs">
+      <DependentUpon>FrmCadPecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadSinistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadSinistro.Designer.cs">
+      <DependentUpon>FrmCadSinistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadUsuario.Designer.cs">
+      <DependentUpon>FrmCadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadEmpresa.Designer.cs">
+      <DependentUpon>FrmCadEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadVeiculos.Designer.cs">
+      <DependentUpon>FrmCadVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadViagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadViagens.Designer.cs">
+      <DependentUpon>FrmCadViagens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\FrmSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\FrmSubMenu.Designer.cs">
+      <DependentUpon>FrmSubMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadAbastecimento.resx">
+      <DependentUpon>FrmCadAbastecimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadAluguel.resx">
+      <DependentUpon>FrmCadAluguel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadEmpresa.resx">
+      <DependentUpon>FrmCadEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadEntradaSaida.resx">
+      <DependentUpon>FrmCadEntradaSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadManutencao.resx">
+      <DependentUpon>FrmCadManutencao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadMotorista.resx">
+      <DependentUpon>FrmCadMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadMultas.resx">
+      <DependentUpon>FrmCadMultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadPecas.resx">
+      <DependentUpon>FrmCadPecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadSinistro.resx">
+      <DependentUpon>FrmCadSinistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadUsuario.resx">
+      <DependentUpon>FrmCadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadVeiculos.resx">
+      <DependentUpon>FrmCadVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadViagens.resx">
+      <DependentUpon>FrmCadViagens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\FrmSubMenu.resx">
+      <DependentUpon>FrmSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helps\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaABCBusiness\SistemaABCBusiness.csproj">
+      <Project>{e17bf1cb-1c68-412a-8ad8-3c04925c18a4}</Project>
+      <Name>SistemaABCBusiness</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
