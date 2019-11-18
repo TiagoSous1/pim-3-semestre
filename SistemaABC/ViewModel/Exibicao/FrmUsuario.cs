@@ -22,5 +22,10 @@ namespace SistemaABC.ViewModel.Exibicao
             FrmCadUsuario frm = new FrmCadUsuario();
             frm.Show();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
