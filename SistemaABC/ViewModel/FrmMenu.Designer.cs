@@ -207,6 +207,7 @@
             this.btnParts.TabIndex = 7;
             this.btnParts.Text = "     Peças";
             this.btnParts.UseVisualStyleBackColor = true;
+            this.btnParts.Click += new System.EventHandler(this.btnParts_Click);
             // 
             // btnMaintenance
             // 
@@ -252,6 +253,7 @@
             this.btnVehicle.TabIndex = 4;
             this.btnVehicle.Text = "     Veiculo";
             this.btnVehicle.UseVisualStyleBackColor = true;
+            this.btnVehicle.Click += new System.EventHandler(this.btnVehicle_Click);
             // 
             // btnReport
             // 
@@ -282,6 +284,7 @@
             this.btnCompany.TabIndex = 3;
             this.btnCompany.Text = "     Empresa";
             this.btnCompany.UseVisualStyleBackColor = true;
+            this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);
             // 
             // btnDriver
             // 
@@ -297,6 +300,7 @@
             this.btnDriver.TabIndex = 2;
             this.btnDriver.Text = "     Motorista";
             this.btnDriver.UseVisualStyleBackColor = true;
+            this.btnDriver.Click += new System.EventHandler(this.btnDriver_Click);
             // 
             // label1
             // 
@@ -346,6 +350,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenu_FormClosing);
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();

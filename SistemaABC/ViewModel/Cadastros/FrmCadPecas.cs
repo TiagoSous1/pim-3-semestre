@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaABCBusiness.Models;
+using SistemaABCBusiness.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,17 @@ namespace SistemaABC.ViewModel
         public FrmCadPecas()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            float preco = float.Parse(txtPreco.Text);
+            DateTime dataCompra = dtpDataCompra.Value;
+
+            TblPecasModel pecasModel = new TblPecasModel(preco, dataCompra, null,null);
+            pecasModel.State = EntityState.Add;
+            pecasModel.saveChange();
         }
     }
 }

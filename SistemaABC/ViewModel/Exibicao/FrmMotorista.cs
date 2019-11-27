@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaABC.ViewModel
+namespace SistemaABC.ViewModel.Exibicao
 {
-    public partial class FrmCadMultas : Form
+    public partial class FrmMotorista : Form
     {
-        public FrmCadMultas()
+        public FrmMotorista()
         {
             InitializeComponent();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

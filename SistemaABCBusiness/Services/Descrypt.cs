@@ -36,8 +36,7 @@ namespace SistemaABCBusiness.Services
         {
             using (MD5 md5Hash = MD5.Create())
             {
-                var senha = RetornarMD5(senhabanco);
-                if (VerificarHash(md5Hash, Senha_MD5, senha))
+                if (VerificarHash(md5Hash, Senha_MD5, senhabanco))
                 {
                     return true;
                 }

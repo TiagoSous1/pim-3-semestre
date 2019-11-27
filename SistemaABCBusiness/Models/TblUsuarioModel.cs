@@ -125,7 +125,6 @@ namespace SistemaABCBusiness.Models
                         idRole = (EntityRole)item.idRole,
                         idAddress = item.idAddress,
                         isActive = item.isActive
-
                     });
                 }
                 return listTblUsuarios;
@@ -142,6 +141,39 @@ namespace SistemaABCBusiness.Models
             {
                 var listTblUsuarios = new List<TblUsuarioModel>();
                 var tblUsuarioDataModel = tblUsuarioRepository.GetSelectUser(idUser);
+
+                foreach (TblUsuarioDAO item in tblUsuarioDataModel)
+                {
+                    listTblUsuarios.Add(new TblUsuarioModel
+                    {
+                        idUser = item.idUser,
+                        deLogin = item.deLogin,
+                        nmUser = item.nmUser,
+                        nuRegistration = item.nuRegistration,
+                        rgRegistration = item.rgRegistration,
+                        cnhRegistration = item.cnhRegistration,
+                        dePassword = item.dePassword,
+                        deEmail = item.deEmail,
+                        idRole = (EntityRole)item.idRole,
+                        idAddress = item.idAddress,
+                        isActive = item.isActive
+
+                    });
+                }
+                return listTblUsuarios;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<TblUsuarioModel> GetSelectUser(string deLogin)
+        {
+            try
+            {
+                var listTblUsuarios = new List<TblUsuarioModel>();
+                var tblUsuarioDataModel = tblUsuarioRepository.GetSelectUser(deLogin);
 
                 foreach (TblUsuarioDAO item in tblUsuarioDataModel)
                 {

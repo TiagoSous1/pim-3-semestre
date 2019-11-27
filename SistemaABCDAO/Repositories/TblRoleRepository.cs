@@ -45,6 +45,11 @@ namespace SistemaABCDAO.Repositories
 
         }
 
+        public int Add(TblPecasDAO entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public int Edit(TblRoleDAO entity)
         {
             try
@@ -60,6 +65,11 @@ namespace SistemaABCDAO.Repositories
             {
                 throw ex;
             }
+        }
+
+        public int Edit(TblPecasDAO entity)
+        {
+            throw new NotImplementedException();
         }
 
         public IEnumerable<TblRoleDAO> GetAll()

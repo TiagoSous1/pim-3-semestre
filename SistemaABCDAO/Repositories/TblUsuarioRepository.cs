@@ -12,7 +12,7 @@ namespace SistemaABCDAO.Repositories
 {
     public class TblUsuarioRepository : MasterRepository, ITblUsuarioRepository
     {
-        private readonly string insert, selectAll, update, delete, select;
+        private readonly string insert, selectAll, update, delete, select, selectUser;
         public TblUsuarioRepository()
         {
             insert = "INSERT INTO PIM..TBL_USUARIO VALUES(@P0,@P1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@P9)";
@@ -31,6 +31,8 @@ namespace SistemaABCDAO.Repositories
                 " WHERE ID_USER = @P10";
 
             select = "SELECT ID_USER,DE_LOGIN,NM_USER,NU_REGISTRATION,RG_REGISTRATION,CNH_REGISTRATION,DE_PASSWORD,DE_EMAIL,ID_ROLE,ID_ADDRESS,IS_ACTIVE FROM dbo.TBL_USUARIO (NOLOCK) WHERE ID_USER = @P0 ";
+
+            selectUser = "SELECT ID_USER,DE_LOGIN,NM_USER,NU_REGISTRATION,RG_REGISTRATION,CNH_REGISTRATION,DE_PASSWORD,DE_EMAIL,ID_ROLE,ID_ADDRESS,IS_ACTIVE FROM dbo.TBL_USUARIO (NOLOCK) WHERE DE_LOGIN = @P0 ";
 
             selectAll = "SELECT ID_USER,DE_LOGIN,NM_USER,NU_REGISTRATION,RG_REGISTRATION,CNH_REGISTRATION,DE_PASSWORD,DE_EMAIL,ID_ROLE,ID_ADDRESS,IS_ACTIVE FROM dbo.TBL_USUARIO (NOLOCK) ";
 
@@ -153,6 +155,42 @@ namespace SistemaABCDAO.Repositories
                 throw ex;
             }
         }
+        public IEnumerable<TblUsuarioDAO> GetSelectUser(string deLogin)
+        {
+            try
+            {
+                parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@P0", deLogin));
+
+                var listTblUsuarios = new List<TblUsuarioDAO>();
+                var tableResult = ExecuteRead(selectUser);
+
+                foreach (DataRow item in tableResult.Rows)
+                {
+                    listTblUsuarios.Add(new TblUsuarioDAO
+                    {
+                        idUser = long.Parse(item["ID_USER"].ToString()),
+                        deLogin = item["DE_LOGIN"].ToString(),
+                        nmUser = item["NM_USER"].ToString(),
+                        nuRegistration = item["NU_REGISTRATION"].ToString(),
+                        rgRegistration = item["RG_REGISTRATION"].ToString(),
+                        cnhRegistration = item["CNH_REGISTRATION"].ToString(),
+                        dePassword = item["DE_PASSWORD"].ToString(),
+                        deEmail = item["DE_EMAIL"].ToString(),
+                        idRole = int.Parse(item["ID_ROLE"].ToString()),
+                        idAddress = int.Parse(item["ID_ADDRESS"].ToString()),
+                        isActive = bool.Parse(item["IS_ACTIVE"].ToString())
+                    });
+                }
+                return listTblUsuarios;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         public int Remove(int entity)
         {

@@ -6,37 +6,28 @@ using System.Threading.Tasks;
 
 namespace SistemaABCDAO.Entities
 {
-    public class TblPecaDAO
+    public class TblPecasDAO
     {
-        /*
-         
-            ID_PIECE	bigint
-            PRICE	numeric
-            DESC_PIECE	varchar
-            DT_BUY	datetime
-            DT_START	datetime
-            DT_FINISH	datetime
-         
-         */
-
-
+     
         public long idPiece { get; set; }
         public float price { get; set; }
         public DateTime? dtBuy { get; set; }
-        public DateTime? DtStart { get; set; }
+        public DateTime? dtStart { get; set; }
         public DateTime? dtFinish { get; set; }
+        public string descPiece { get; set; }
 
-        public TblPecaDAO()
+        public TblPecasDAO()
         {
         }
 
-        public TblPecaDAO(long idPiece, float price, DateTime? dtBuy, DateTime? dtStart, DateTime? dtFinish)
+        public TblPecasDAO(long idPiece, float price, DateTime? dtBuy, DateTime? dtStart, DateTime? dtFinish, string descPiece)
         {
             this.idPiece = idPiece;
             this.price = price;
             this.dtBuy = dtBuy;
-            DtStart = dtStart;
+            this.dtStart = dtStart;
             this.dtFinish = dtFinish;
+            this.descPiece = descPiece;
         }
     }
 }

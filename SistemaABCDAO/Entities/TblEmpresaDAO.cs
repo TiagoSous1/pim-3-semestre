@@ -8,17 +8,6 @@ namespace SistemaABCDAO.Entities
 {
     public class TblEmpresaDAO
     {
-        /**
-         * 
-         *  ID_COMPANY	bigint
-            NM_COMPANY	varchar
-            NU_REGISTRATION	varchar
-            STATE	varchar
-            ID_ADDRESS	int
-            TEL	bigint
-         * 
-         * **/
-
         public long? idCompany { get; set; }
         public string nmCompany { get; set; }
         public string nuRegistration { get; set; }

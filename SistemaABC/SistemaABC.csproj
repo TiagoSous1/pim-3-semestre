@@ -49,11 +49,47 @@
     <Compile Include="Entities\OpenNewForm.cs" />
     <Compile Include="Entities\ValidaCNH.cs" />
     <Compile Include="Entities\ValidaDigitoCPF.cs" />
+    <Compile Include="ViewModel\Exibicao\FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmMotorista.Designer.cs">
+      <DependentUpon>FrmMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmMultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmMultas.Designer.cs">
+      <DependentUpon>FrmMultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmPecas.Designer.cs">
+      <DependentUpon>FrmPecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmRelatorio.Designer.cs">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Exibicao\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewModel\Exibicao\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmVeiculos.Designer.cs">
+      <DependentUpon>FrmVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Form1.cs">
       <SubType>Form</SubType>
@@ -162,8 +198,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmMotorista.resx">
+      <DependentUpon>FrmMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmMultas.resx">
+      <DependentUpon>FrmMultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmPecas.resx">
+      <DependentUpon>FrmPecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmRelatorio.resx">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewModel\Exibicao\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmVeiculos.resx">
+      <DependentUpon>FrmVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModel\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

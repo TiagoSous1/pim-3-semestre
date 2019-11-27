@@ -8,17 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaABC.ViewModel
+namespace SistemaABC.ViewModel.Exibicao
 {
-    public partial class FrmCadMultas : Form
+    public partial class FrmPecas : Form
     {
-        public FrmCadMultas()
+        public FrmPecas()
         {
             InitializeComponent();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnCadastro_Click(object sender, EventArgs e)
         {
+            FrmCadPecas cadPecas = new FrmCadPecas();
+            cadPecas.Show();
 
         }
     }

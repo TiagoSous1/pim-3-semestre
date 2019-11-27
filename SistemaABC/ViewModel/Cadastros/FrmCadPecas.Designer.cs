@@ -29,47 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadPecas));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCod = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtNomePecas = new System.Windows.Forms.TextBox();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataCompra = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.button2.Location = new System.Drawing.Point(500, 214);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 35);
-            this.button2.TabIndex = 53;
-            this.button2.Text = "Limpar Pesquisa";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.Black;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.btnClear.Location = new System.Drawing.Point(500, 214);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(150, 35);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "Limpar Pesquisa";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.button1.Location = new System.Drawing.Point(12, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 35);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.btnSave.Location = new System.Drawing.Point(12, 214);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 35);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label4
             // 
@@ -93,12 +94,13 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Códico da peça";
             // 
-            // textBox1
+            // txtCod
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 22);
-            this.textBox1.TabIndex = 48;
+            this.txtCod.Enabled = false;
+            this.txtCod.Location = new System.Drawing.Point(12, 129);
+            this.txtCod.Name = "txtCod";
+            this.txtCod.Size = new System.Drawing.Size(316, 22);
+            this.txtCod.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -132,19 +134,19 @@
             this.label5.TabIndex = 58;
             this.label5.Text = "Nome da peça";
             // 
-            // textBox6
+            // txtPreco
             // 
-            this.textBox6.Location = new System.Drawing.Point(334, 179);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(316, 22);
-            this.textBox6.TabIndex = 57;
+            this.txtPreco.Location = new System.Drawing.Point(334, 179);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(316, 22);
+            this.txtPreco.TabIndex = 5;
             // 
-            // textBox4
+            // txtNomePecas
             // 
-            this.textBox4.Location = new System.Drawing.Point(334, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(316, 22);
-            this.textBox4.TabIndex = 55;
+            this.txtNomePecas.Location = new System.Drawing.Point(334, 129);
+            this.txtNomePecas.Name = "txtNomePecas";
+            this.txtNomePecas.Size = new System.Drawing.Size(316, 22);
+            this.txtNomePecas.TabIndex = 2;
             // 
             // panelTop
             // 
@@ -156,28 +158,28 @@
             this.panelTop.Size = new System.Drawing.Size(656, 96);
             this.panelTop.TabIndex = 54;
             // 
-            // dateTimePicker1
+            // dtpDataCompra
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 179);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(316, 22);
-            this.dateTimePicker1.TabIndex = 61;
+            this.dtpDataCompra.Location = new System.Drawing.Point(12, 179);
+            this.dtpDataCompra.Name = "dtpDataCompra";
+            this.dtpDataCompra.Size = new System.Drawing.Size(316, 22);
+            this.dtpDataCompra.TabIndex = 3;
             // 
             // FrmCadPecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 266);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dtpDataCompra);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCod);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.txtNomePecas);
             this.Controls.Add(this.panelTop);
             this.Name = "FrmCadPecas";
             this.Text = "FrmCadPecas";
@@ -189,17 +191,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.TextBox txtNomePecas;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDataCompra;
     }
 }

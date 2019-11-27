@@ -43,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contrats\IGenericRepository.cs" />
+    <Compile Include="Contrats\ITblEmpresaRepository.cs" />
     <Compile Include="Contrats\ITblEnderecoRepository.cs" />
+    <Compile Include="Contrats\ITblMultasRepository.cs" />
+    <Compile Include="Contrats\ITblPecasRepository.cs" />
     <Compile Include="Contrats\ITblRoleRepository.cs" />
     <Compile Include="Contrats\ITblUsuarioRepository.cs" />
     <Compile Include="Entities\TblAbastecimentoDAO.cs" />
@@ -54,7 +57,7 @@
     <Compile Include="Entities\TblInfracaoDAO.cs" />
     <Compile Include="Entities\TblManutencaoDAO.cs" />
     <Compile Include="Entities\TblMultasDAO.cs" />
-    <Compile Include="Entities\TblPecaDAO.cs" />
+    <Compile Include="Entities\TblPecasDAO.cs" />
     <Compile Include="Entities\TblRoleDAO.cs" />
     <Compile Include="Entities\TblSinistroDAO.cs" />
     <Compile Include="Entities\TblUsuarioDAO.cs" />
@@ -62,7 +65,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\MasterRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\TblEmpresaRepository.cs" />
     <Compile Include="Repositories\TblEnderecoRepository.cs" />
+    <Compile Include="Repositories\TblMultasRepository.cs" />
+    <Compile Include="Repositories\TblPecasRepository.cs" />
     <Compile Include="Repositories\TblRoleRepository.cs" />
     <Compile Include="Repositories\TblUsuarioRepository.cs" />
   </ItemGroup>

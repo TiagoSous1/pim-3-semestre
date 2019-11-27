@@ -65,7 +65,6 @@ namespace SistemaABCDAO.Repositories
         {
             try
             {
-
                 var listTblEndenreco = new List<TblEnderecoDAO>();
                 var tableResult = ExecuteRead(selectAll);
 

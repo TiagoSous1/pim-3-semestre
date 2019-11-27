@@ -1,6 +1,6 @@
 ﻿namespace SistemaABC.ViewModel.Exibicao
 {
-    partial class FrmUsuario
+    partial class FrmVeiculos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,82 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadUsuario = new System.Windows.Forms.Button();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.panelTop.Controls.Add(this.btnVoltar);
-            this.panelTop.Controls.Add(this.btnExcluir);
-            this.panelTop.Controls.Add(this.btnEditar);
-            this.panelTop.Controls.Add(this.btnCadUsuario);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1153, 136);
-            this.panelTop.TabIndex = 1;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
-            this.btnVoltar.Location = new System.Drawing.Point(561, 32);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(177, 72);
-            this.btnVoltar.TabIndex = 3;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
-            this.btnExcluir.Location = new System.Drawing.Point(378, 32);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(177, 72);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.ForeColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(195, 32);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(177, 72);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnCadUsuario
-            // 
-            this.btnCadUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCadUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnCadUsuario.Location = new System.Drawing.Point(12, 32);
-            this.btnCadUsuario.Name = "btnCadUsuario";
-            this.btnCadUsuario.Size = new System.Drawing.Size(177, 72);
-            this.btnCadUsuario.TabIndex = 0;
-            this.btnCadUsuario.Text = "Cadastrar";
-            this.btnCadUsuario.UseVisualStyleBackColor = true;
-            this.btnCadUsuario.Click += new System.EventHandler(this.btnCadUsuario_Click);
             // 
             // dgvUsers
             // 
@@ -147,31 +80,96 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dgvUsers.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvUsers.Size = new System.Drawing.Size(1153, 451);
-            this.dgvUsers.TabIndex = 2;
+            this.dgvUsers.Size = new System.Drawing.Size(800, 314);
+            this.dgvUsers.TabIndex = 6;
             // 
-            // FrmUsuario
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.panelTop.Controls.Add(this.btnVoltar);
+            this.panelTop.Controls.Add(this.btnExcluir);
+            this.panelTop.Controls.Add(this.btnEditar);
+            this.panelTop.Controls.Add(this.btnCadUsuario);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(800, 136);
+            this.panelTop.TabIndex = 5;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ForeColor = System.Drawing.Color.Black;
+            this.btnVoltar.Location = new System.Drawing.Point(561, 32);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(177, 72);
+            this.btnVoltar.TabIndex = 3;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnExcluir.ForeColor = System.Drawing.Color.Black;
+            this.btnExcluir.Location = new System.Drawing.Point(378, 32);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(177, 72);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
+            this.btnEditar.Location = new System.Drawing.Point(195, 32);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(177, 72);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnCadUsuario
+            // 
+            this.btnCadUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadUsuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCadUsuario.ForeColor = System.Drawing.Color.Black;
+            this.btnCadUsuario.Location = new System.Drawing.Point(12, 32);
+            this.btnCadUsuario.Name = "btnCadUsuario";
+            this.btnCadUsuario.Size = new System.Drawing.Size(177, 72);
+            this.btnCadUsuario.TabIndex = 0;
+            this.btnCadUsuario.Text = "Cadastrar";
+            this.btnCadUsuario.UseVisualStyleBackColor = true;
+            // 
+            // FrmVeiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 587);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.panelTop);
-            this.Name = "FrmUsuario";
-            this.Text = "FrmUsuario";
-            this.Load += new System.EventHandler(this.FrmUsuario_Load);
-            this.panelTop.ResumeLayout(false);
+            this.Name = "FrmVeiculos";
+            this.Text = "FrmVeiculos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
+            this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Button btnCadUsuario;
+
         public System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCadUsuario;
     }
 }
