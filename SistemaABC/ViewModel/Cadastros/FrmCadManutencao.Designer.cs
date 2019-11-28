@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadManutencao));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDescManut = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPrecoPecas = new System.Windows.Forms.TextBox();
+            this.txtCodPecas = new System.Windows.Forms.TextBox();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCodEmpresa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodCar = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataMarcada = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraMarcada = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,13 +66,13 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "Descrição da Manutenção";
             // 
-            // textBox8
+            // txtDescManut
             // 
-            this.textBox8.Location = new System.Drawing.Point(12, 277);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(638, 107);
-            this.textBox8.TabIndex = 61;
+            this.txtDescManut.Location = new System.Drawing.Point(12, 277);
+            this.txtDescManut.Multiline = true;
+            this.txtDescManut.Name = "txtDescManut";
+            this.txtDescManut.Size = new System.Drawing.Size(638, 107);
+            this.txtDescManut.TabIndex = 61;
             // 
             // pictureBox1
             // 
@@ -106,19 +106,19 @@
             this.label5.TabIndex = 58;
             this.label5.Text = "Código da peça";
             // 
-            // textBox5
+            // txtPrecoPecas
             // 
-            this.textBox5.Location = new System.Drawing.Point(334, 183);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(316, 22);
-            this.textBox5.TabIndex = 56;
+            this.txtPrecoPecas.Location = new System.Drawing.Point(334, 183);
+            this.txtPrecoPecas.Name = "txtPrecoPecas";
+            this.txtPrecoPecas.Size = new System.Drawing.Size(316, 22);
+            this.txtPrecoPecas.TabIndex = 56;
             // 
-            // textBox4
+            // txtCodPecas
             // 
-            this.textBox4.Location = new System.Drawing.Point(334, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(316, 22);
-            this.textBox4.TabIndex = 55;
+            this.txtCodPecas.Location = new System.Drawing.Point(334, 135);
+            this.txtCodPecas.Name = "txtCodPecas";
+            this.txtCodPecas.Size = new System.Drawing.Size(316, 22);
+            this.txtCodPecas.TabIndex = 55;
             // 
             // panelTop
             // 
@@ -130,31 +130,32 @@
             this.panelTop.Size = new System.Drawing.Size(662, 96);
             this.panelTop.TabIndex = 54;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.button2.Location = new System.Drawing.Point(500, 514);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 35);
-            this.button2.TabIndex = 53;
-            this.button2.Text = "Limpar Pesquisa";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.Black;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.btnClear.Location = new System.Drawing.Point(500, 514);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(150, 35);
+            this.btnClear.TabIndex = 53;
+            this.btnClear.Text = "Limpar Pesquisa";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.button1.Location = new System.Drawing.Point(12, 514);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 35);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Black;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
+            this.btnSave.Location = new System.Drawing.Point(12, 514);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 35);
+            this.btnSave.TabIndex = 52;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label4
             // 
@@ -178,12 +179,12 @@
             this.label3.TabIndex = 50;
             this.label3.Text = "Data";
             // 
-            // textBox3
+            // txtCodEmpresa
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(638, 22);
-            this.textBox3.TabIndex = 49;
+            this.txtCodEmpresa.Location = new System.Drawing.Point(12, 230);
+            this.txtCodEmpresa.Name = "txtCodEmpresa";
+            this.txtCodEmpresa.Size = new System.Drawing.Size(638, 22);
+            this.txtCodEmpresa.TabIndex = 49;
             // 
             // label2
             // 
@@ -196,12 +197,12 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Códico do carro";
             // 
-            // textBox1
+            // txtCodCar
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 22);
-            this.textBox1.TabIndex = 48;
+            this.txtCodCar.Location = new System.Drawing.Point(12, 135);
+            this.txtCodCar.Name = "txtCodCar";
+            this.txtCodCar.Size = new System.Drawing.Size(316, 22);
+            this.txtCodCar.TabIndex = 48;
             // 
             // checkBox1
             // 
@@ -223,28 +224,28 @@
             this.checkBox2.Text = "Preventiva";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpData
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 182);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(316, 22);
-            this.dateTimePicker1.TabIndex = 66;
+            this.dtpData.Location = new System.Drawing.Point(12, 182);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(316, 22);
+            this.dtpData.TabIndex = 66;
             // 
-            // dateTimePicker2
+            // dtpDataMarcada
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(540, 416);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(109, 22);
-            this.dateTimePicker2.TabIndex = 67;
+            this.dtpDataMarcada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataMarcada.Location = new System.Drawing.Point(540, 416);
+            this.dtpDataMarcada.Name = "dtpDataMarcada";
+            this.dtpDataMarcada.Size = new System.Drawing.Size(109, 22);
+            this.dtpDataMarcada.TabIndex = 67;
             // 
-            // dateTimePicker3
+            // dtpHoraMarcada
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker3.Location = new System.Drawing.Point(540, 469);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(109, 22);
-            this.dateTimePicker3.TabIndex = 68;
+            this.dtpHoraMarcada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraMarcada.Location = new System.Drawing.Point(540, 469);
+            this.dtpHoraMarcada.Name = "dtpHoraMarcada";
+            this.dtpHoraMarcada.Size = new System.Drawing.Size(109, 22);
+            this.dtpHoraMarcada.TabIndex = 68;
             // 
             // label7
             // 
@@ -275,25 +276,25 @@
             this.ClientSize = new System.Drawing.Size(662, 564);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpHoraMarcada);
+            this.Controls.Add(this.dtpDataMarcada);
+            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtDescManut);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtPrecoPecas);
+            this.Controls.Add(this.txtCodPecas);
             this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCodEmpresa);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCodCar);
             this.Name = "FrmCadManutencao";
             this.Text = "FrmCadManutencao";
             this.Load += new System.EventHandler(this.FrmCadManutencao_Load);
@@ -306,25 +307,25 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDescManut;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrecoPecas;
+        private System.Windows.Forms.TextBox txtCodPecas;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCodEmpresa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodCar;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.DateTimePicker dtpDataMarcada;
+        private System.Windows.Forms.DateTimePicker dtpHoraMarcada;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
     }

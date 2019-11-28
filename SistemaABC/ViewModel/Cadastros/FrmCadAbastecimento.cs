@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaABCBusiness.Models;
+using SistemaABCBusiness.ValueObjects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,15 @@ namespace SistemaABC.ViewModel
         public FrmCadAbastecimento()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            TblAbastecimentoModel abastecimentoModel = new TblAbastecimentoModel();
+
+            abastecimentoModel.State = EntityState.Add;
+            MessageBox.Show(abastecimentoModel.saveChange());
+
         }
     }
 }

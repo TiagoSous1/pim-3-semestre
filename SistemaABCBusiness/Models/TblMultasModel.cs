@@ -24,30 +24,47 @@ namespace SistemaABCBusiness.Models
 
         public EntityState State { get; set; }
 
+        public TblMultasModel(long? idFines, long? idVehicle, int? idInfraction, DateTime? dtFines, string codeBar, long? idCompany, float price)
+        {
+            this.idFines = idFines;
+            this.idVehicle = idVehicle;
+            this.idInfraction = idInfraction;
+            this.dtFines = dtFines;
+            this.codeBar = codeBar;
+            this.idCompany = idCompany;
+            this.price = price;
+        }
+
+        public TblMultasModel()
+        {
+        }
+
+
         public string saveChange()
         {
             string message = "";
 
             try
             {
-                TblMultasDAO tblEmpresaDataRepository = new TblMultasDAO
+                TblMultasDAO tblMultasDataRepository = new TblMultasDAO();
                 {
-                    idFines = idFines,
-                    codeBar = codeBar,
-                    dtFines = dtFines,
-                    idInfraction = idInfraction,
-                    idVehicle = idVehicle
+                    tblMultasDataRepository.idFines = idFines;
+                    tblMultasDataRepository.codeBar = codeBar;
+                    tblMultasDataRepository.dtFines = dtFines;
+                    tblMultasDataRepository.idInfraction = idInfraction;
+                    tblMultasDataRepository.idVehicle = idVehicle;
+                    tblMultasDataRepository.idCompany = idCompany;
                 };
 
                 switch (State)
                 {
                     //Execulta reglas comerciais / calculos
                     case EntityState.Add:
-                        empresaRepository.Add(tblEmpresaDataRepository);
+                        empresaRepository.Add(tblMultasDataRepository);
                         message = "Usuário Cadastrado com sucesso!";
                         break;
                     case EntityState.Modified:
-                        empresaRepository.Edit(tblEmpresaDataRepository);
+                        empresaRepository.Edit(tblMultasDataRepository);
                         message = "Usuário alterado com sucesso!";
                         break;
                     case EntityState.Delete:

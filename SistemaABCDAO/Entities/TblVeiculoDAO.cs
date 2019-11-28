@@ -9,15 +9,6 @@ namespace SistemaABCDAO.Entities
     public class TblVeiculoDAO
     {
 
-        /*
-            ID_VEHICLE	bigint
-            DESC_VEHICLE	varchar
-            BOARD	varchar
-            ID_COMPANY	bigint
-            KILOMETRO	int
-            YEAR	int         
-         */
-
         public long? idVehicle { get; set; }
         public string descVehicle { get; set; }
         public string board { get; set; }

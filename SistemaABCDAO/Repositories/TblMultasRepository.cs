@@ -16,15 +16,15 @@ namespace SistemaABCDAO.Repositories
 
         public TblMultasRepository()
         {
-            insert = "INSERT INTO PIM..TBL_PECA VALUES (@P0, @P1, @P2, @P3, @P4)";
+            insert = "INSERT INTO PIM..TBL_MULTAS VALUES (@P1, @P2, @P3, @P4, @P5, @P6)";
 
-            delete = "DELETE FROM PIM..TBL_PECA WHERE ID_PIECE = @P0";
+            delete = "DELETE FROM PIM..TBL_MULTAS WHERE ID_FINES = @P0";
 
-            select = "SELECT PRICE,DESC_PIECE,DT_BUY,DT_START,DT_FINISH PIM..TBL_PECA WITH(NOLOCK) WHERE ID_PIECE = @P0";
+            select = "SELECT ID_FINES,ID_VEHICLE,ID_INFRACTION,ID_COMPANY,DT_FINES,PRICE,CODE_BAR PIM..TBL_MULTAS WITH(NOLOCK) WHERE ID_FINES = @P0";
 
-            selectAll = "SELECT PRICE,DESC_PIECE,DT_BUY,DT_START,DT_FINISH FROM PIM..TBL_PECA WITH(NOLOCK) ";
+            selectAll = "SELECT ID_FINES,ID_VEHICLE,ID_INFRACTION,ID_COMPANY,DT_FINES,PRICE,CODE_BAR FROM PIM..TBL_MULTAS WITH(NOLOCK) ";
 
-            update = "UPDATE PIM..TBL_PECA SET PRICE = @P1,DESC_PIECE = @P2,DT_BUY = @P3,DT_START = @P4,DT_FINISH = @P5 WHERE ID_PIECE = @P0";
+            update = "UPDATE PIM..TBL_MULTAS SET ID_VEHICLE = @P0, ID_INFRACTION = @P1 ,ID_COMPANY = @P2 ,DT_FINES = @P3 ,PRICE = @P4 ,CODE_BAR  = @P5 WHERE ID_FINES = @P6 ";
         }
 
         public int Add(TblMultasDAO entity)
@@ -33,7 +33,6 @@ namespace SistemaABCDAO.Repositories
             {
                 parameters = new List<SqlParameter>
                 {
-                    new SqlParameter("@P0", entity.idFines),
                     new SqlParameter("@P1", entity.idVehicle),
                     new SqlParameter("@P2", entity.idInfraction),
                     new SqlParameter("@P3", entity.idCompany),
@@ -59,7 +58,8 @@ namespace SistemaABCDAO.Repositories
                     new SqlParameter("@P2", entity.idCompany),
                     new SqlParameter("@P3", entity.dtFines),
                     new SqlParameter("@P4", entity.price),
-                    new SqlParameter("@P5", entity.codeBar)
+                    new SqlParameter("@P5", entity.codeBar),
+                    new SqlParameter("@P6", entity.idFines)
                 };
                 return ExecuteNonQuery(update);
             }
@@ -107,7 +107,7 @@ namespace SistemaABCDAO.Repositories
                     new SqlParameter("@P0", id)
                 };
                 var listTblPecas = new List<TblMultasDAO>();
-                var tableResult = ExecuteRead(selectAll);
+                var tableResult = ExecuteRead(select);
 
                 foreach (DataRow item in tableResult.Rows)
                 {

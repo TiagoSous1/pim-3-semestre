@@ -158,6 +158,7 @@
             this.Controls.Add(this.panelTop);
             this.Name = "FrmPecas";
             this.Text = "FrmPecas";
+            this.Load += new System.EventHandler(this.FrmPecas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -64,7 +64,7 @@ namespace SistemaABCBusiness.Models
             string message = "";
 
             try
-            {
+            { 
                 TblUsuarioDAO tblUsuarioDataRepository = new TblUsuarioDAO();
                 tblUsuarioDataRepository.idUser = idUser;
                 tblUsuarioDataRepository.deLogin = deLogin;

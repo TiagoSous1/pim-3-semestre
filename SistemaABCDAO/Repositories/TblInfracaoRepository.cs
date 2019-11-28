@@ -10,31 +10,31 @@ using System.Threading.Tasks;
 
 namespace SistemaABCDAO.Repositories
 {
-    public class TblRoleRepository : MasterRepository, ITblRoleRepository
+    public class TblInfracaoRepository : MasterRepository, ITblInfracaoRepository
     {
         private readonly string select, selectAll, delete, update, insert;
 
-        public TblRoleRepository()
+        public TblInfracaoRepository()
         {
-            insert = "INSERT INTO PIM..TBL_ROLE VALUES (@P0, @P1)";
+            insert = "INSERT INTO PIM..TBL_INFRACAO VALUES (@P0, 1, @P1)";
 
-            delete = "DELETE FROM PIM..TBL_ROLE WHERE ID_ROLE = @P0";
+            delete = "DELETE FROM PIM..TBL_INFRACAO WHERE ID_INFRACTION = @P0";
 
-            select = "SELECT ID_ROLE, NM_ROLE, IS_ACTIVE PIM..TBL_ROLE WITH(NOLOCK) WHERE ID_ROLE = @P0";
+            select = "SELECT ID_INFRACTION,NM_INFRACTION,DESC_INFRACTION,IS_ACTIVE PIM..TBL_INFRACAO WITH(NOLOCK) WHERE ID_INFRACTION = @P0";
 
-            selectAll = "SELECT ID_ROLE,NM_ROLE,IS_ACTIVE FROM PIM..TBL_ROLE WITH(NOLOCK) ";
+            selectAll = "SELECT ID_INFRACTION,NM_INFRACTION,DESC_INFRACTION,IS_ACTIVE FROM PIM..TBL_INFRACAO WITH(NOLOCK) ";
 
-            update = "UPDATE PIM..TBL_ROLE SET NM_ROLE = @P1, IS_ACTIVE = @P2 WHERE ID_ROLE = @P0";
+            update = "UPDATE PIM..TBL_INFRACAO ";
         }
 
-        public int Add(TblRoleDAO entity)
+        public int Add(TblInfracaoDAO entity)
         {
             try
             {
                 parameters = new List<SqlParameter>
                 {
-                    new SqlParameter("@P0", entity.nmRole),
-                    new SqlParameter("@P1", entity.isActive)
+                    new SqlParameter("@P0", entity.descInfraction),
+                    new SqlParameter("@P1", entity.nmInfraction)
                 };
                 return ExecuteNonQuery(insert);
             }
@@ -42,17 +42,17 @@ namespace SistemaABCDAO.Repositories
             {
                 throw ex;
             }
-
         }
 
-        public int Edit(TblRoleDAO entity)
+        public int Edit(TblInfracaoDAO entity)
         {
             try
             {
                 parameters = new List<SqlParameter>
                 {
-                    new SqlParameter("@P0", entity.nmRole),
-                    new SqlParameter("@P0", entity.isActive)
+                    new SqlParameter("@P0", entity.descInfraction),
+                    new SqlParameter("@P1", entity.nmInfraction),
+                    new SqlParameter("@P2", entity.isActive)
                 };
                 return ExecuteNonQuery(update);
             }
@@ -62,28 +62,24 @@ namespace SistemaABCDAO.Repositories
             }
         }
 
-        public int Edit(TblPecasDAO entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<TblRoleDAO> GetAll()
+        public IEnumerable<TblInfracaoDAO> GetAll()
         {
             try
             {
-                var listTblRole = new List<TblRoleDAO>();
+                var listTblInfracao = new List<TblInfracaoDAO>();
                 var tableResult = ExecuteRead(selectAll);
 
                 foreach (DataRow item in tableResult.Rows)
                 {
-                    listTblRole.Add(new TblRoleDAO
+                    listTblInfracao.Add(new TblInfracaoDAO
                     {
-                        idRole = int.Parse(item["ID_ROLE"].ToString()),
-                        nmRole = item["NM_ROLE"].ToString(),
+                        idInfraction = int.Parse(item["ID_INFRACTION"].ToString()),
+                        descInfraction = item["DESC_INFRACTION"].ToString(),
+                        nmInfraction = item["NM_INFRACTION"].ToString(),
                         isActive = bool.Parse(item["IS_ACTIVE"].ToString())
                     });
                 }
-                return listTblRole;
+                return listTblInfracao;
 
             }
             catch (Exception ex)
@@ -91,27 +87,29 @@ namespace SistemaABCDAO.Repositories
                 throw ex;
             }
         }
-        public IEnumerable<TblRoleDAO> GetSelectRole(int idRole)
+        public IEnumerable<TblInfracaoDAO> GetSelected(int idVehicle)
         {
             try
             {
-                var listTblRole = new List<TblRoleDAO>();
                 parameters = new List<SqlParameter>
                 {
-                    new SqlParameter("@P0", idRole)
+                    new SqlParameter("@P0",idVehicle)
                 };
+
+                var listTblInfracao = new List<TblInfracaoDAO>();
                 var tableResult = ExecuteRead(select);
 
                 foreach (DataRow item in tableResult.Rows)
                 {
-                    listTblRole.Add(new TblRoleDAO
+                    listTblInfracao.Add(new TblInfracaoDAO
                     {
-                        idRole = int.Parse(item["ID_ROLE"].ToString()),
-                        nmRole = item["NM_ROLE"].ToString(),
+                        idInfraction = int.Parse(item["ID_INFRACTION"].ToString()),
+                        descInfraction = item["DESC_INFRACTION"].ToString(),
+                        nmInfraction = item["NM_INFRACTION"].ToString(),
                         isActive = bool.Parse(item["IS_ACTIVE"].ToString())
                     });
                 }
-                return listTblRole;
+                return listTblInfracao;
 
             }
             catch (Exception ex)

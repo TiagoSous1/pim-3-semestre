@@ -24,10 +24,26 @@ namespace SistemaABC.ViewModel
 
             float preco = float.Parse(txtPreco.Text);
             DateTime dataCompra = dtpDataCompra.Value;
+            string descPecas = txtDescPecas.Text;
 
-            TblPecasModel pecasModel = new TblPecasModel(preco, dataCompra, null,null);
+            TblPecasModel pecasModel = new TblPecasModel(preco, dataCompra, dataCompra,null,descPecas);
             pecasModel.State = EntityState.Add;
-            pecasModel.saveChange();
+            MessageBox.Show(pecasModel.saveChange());
+
+            txtCod.Text = string.Empty;
+            txtDescPecas.Text = string.Empty;
+            txtNomePecas.Text = string.Empty;
+            txtPreco.Text = string.Empty;
+            dtpDataCompra.Value = DateTime.Now;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtCod.Text = string.Empty;
+            txtDescPecas.Text = string.Empty;
+            txtNomePecas.Text = string.Empty;
+            txtPreco.Text = string.Empty;
+            dtpDataCompra.Value = DateTime.Now;
         }
     }
 }

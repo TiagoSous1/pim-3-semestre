@@ -158,6 +158,7 @@
             this.Controls.Add(this.panelTop);
             this.Name = "FrmMultas";
             this.Text = "FrmMultas";
+            this.Load += new System.EventHandler(this.FrmMultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);

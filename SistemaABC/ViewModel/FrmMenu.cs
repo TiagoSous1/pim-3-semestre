@@ -37,7 +37,7 @@ namespace SistemaABC.ViewModel
 
         private void btnDriver_Click(object sender, EventArgs e)
         {
-            FrmMotorista form = new FrmMotorista();
+            FrmInfracao form = new FrmInfracao();
             OpenNewForm openNew = new OpenNewForm();
             openNew.AbrirFormEnPanel(form, panelFull);
         }
@@ -52,6 +52,17 @@ namespace SistemaABC.ViewModel
         private void btnParts_Click(object sender, EventArgs e)
         {
             FrmPecas form = new FrmPecas();
+            OpenNewForm openNew = new OpenNewForm();
+            openNew.AbrirFormEnPanel(form, panelFull);
+        }
+
+        private void btnSupply_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void brnFines_Click(object sender, EventArgs e)
+        {
+            FrmMultas form = new FrmMultas();
             OpenNewForm openNew = new OpenNewForm();
             openNew.AbrirFormEnPanel(form, panelFull);
         }

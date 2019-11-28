@@ -23,5 +23,10 @@ namespace SistemaABC.ViewModel.Exibicao
             cadPecas.Show();
 
         }
+
+        private void FrmPecas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

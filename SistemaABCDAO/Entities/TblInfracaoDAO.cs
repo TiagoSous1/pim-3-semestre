@@ -8,28 +8,22 @@ namespace SistemaABCDAO.Entities
 {
     public class TblInfracaoDAO
     {
-        /**
-         * 
-         *  ID_INFRACTION	int
-            DESC_INFRACTION	varchar
-            IS_ACTIVE	bit
-         * 
-         * */
-
 
         public int? idInfraction { get; set; }
         public string descInfraction { get; set; }
+        public string nmInfraction { get; set; }
         public bool isActive { get; set; }
 
         public TblInfracaoDAO()
         {
         }
 
-        public TblInfracaoDAO(int? idInfraction, string descInfraction, bool isActive)
+        public TblInfracaoDAO(int? idInfraction, string descInfraction, bool isActive,string nmInfraction)
         {
             this.idInfraction = idInfraction;
             this.descInfraction = descInfraction;
             this.isActive = isActive;
+            this.nmInfraction = nmInfraction;
         }
     }
 }

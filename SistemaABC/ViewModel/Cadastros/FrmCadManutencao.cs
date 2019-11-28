@@ -21,5 +21,10 @@ namespace SistemaABC.ViewModel
         {
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

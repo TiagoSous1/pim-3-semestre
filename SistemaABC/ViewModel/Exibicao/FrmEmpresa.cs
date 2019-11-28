@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaABCBusiness.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace SistemaABC.ViewModel.Exibicao
 
         private void FrmEmpresa_Load(object sender, EventArgs e)
         {
-
+            TblEmpresaModel empresaModel = new TblEmpresaModel();
+            dgvUsers.DataSource = empresaModel.GetAll();
         }
 
         private void btnCadEmpresa_Click(object sender, EventArgs e)

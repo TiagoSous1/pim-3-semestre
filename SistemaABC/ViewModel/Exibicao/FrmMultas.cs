@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaABCBusiness.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,14 @@ namespace SistemaABC.ViewModel.Exibicao
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            FrmCadMultas frm = new FrmCadMultas();
+            frm.Show();
+        }
 
+        private void FrmMultas_Load(object sender, EventArgs e)
+        {
+            TblMultasModel multasModel = new TblMultasModel();
+            dgvUsers.DataSource = multasModel.GetAll();
         }
     }
 }

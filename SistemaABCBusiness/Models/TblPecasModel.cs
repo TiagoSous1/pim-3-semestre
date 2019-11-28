@@ -3,9 +3,6 @@ using SistemaABCDAO.Entities;
 using SistemaABCDAO.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SistemaABCBusiness.Models
 {
@@ -19,17 +16,19 @@ namespace SistemaABCBusiness.Models
         public DateTime? dtBuy { get; set; }
         public DateTime? dtStart { get; set; }
         public DateTime? dtFinish { get; set; }
+        public string descPiece { get; set; }
         public EntityState State { get; set; }
 
         public TblPecasModel()
         { 
         }
 
-        public TblPecasModel(float price, DateTime? dtBuy, DateTime? dtStart, DateTime? dtFinish)
+        public TblPecasModel(float price, DateTime? dtBuy, DateTime? dtStart, DateTime? dtFinish, string descPiece)
         {
             this.price = price;
             this.dtBuy = dtBuy;
             this.dtStart = dtStart;
+            this.descPiece = descPiece;
             this.dtFinish = dtFinish;
         }
 
@@ -45,9 +44,9 @@ namespace SistemaABCBusiness.Models
                     dtBuy = dtBuy,
                     dtFinish = dtFinish,
                     dtStart = dtStart,
-                    price = price
+                    price = price,
+                    descPiece = descPiece
                 };
-
 
                 switch (State)
                 {
@@ -88,7 +87,8 @@ namespace SistemaABCBusiness.Models
                         dtBuy = item.dtBuy,
                         dtStart = item.dtStart,
                         dtFinish = item.dtFinish,
-                        price = item.price
+                        price = item.price,
+                        descPiece = item.descPiece                        
                     });
                 }
                 return listPecas;
@@ -114,7 +114,8 @@ namespace SistemaABCBusiness.Models
                         dtBuy = item.dtBuy,
                         dtStart = item.dtStart,
                         dtFinish = item.dtFinish,
-                        price = item.price
+                        price = item.price,
+                        descPiece = item.descPiece                        
                     });
                 }
                 return listTblRole;

@@ -41,6 +41,8 @@
             this.txtNomePecas = new System.Windows.Forms.TextBox();
             this.panelTop = new System.Windows.Forms.Panel();
             this.dtpDataCompra = new System.Windows.Forms.DateTimePicker();
+            this.lblDescPecas = new System.Windows.Forms.Label();
+            this.txtDescPecas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
@@ -51,12 +53,13 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.btnClear.Location = new System.Drawing.Point(500, 214);
+            this.btnClear.Location = new System.Drawing.Point(500, 287);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(150, 35);
-            this.btnClear.TabIndex = 7;
+            this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Limpar Pesquisa";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -64,10 +67,10 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(192)))), ((int)(((byte)(68)))));
-            this.btnSave.Location = new System.Drawing.Point(12, 214);
+            this.btnSave.Location = new System.Drawing.Point(12, 287);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 35);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -165,11 +168,32 @@
             this.dtpDataCompra.Size = new System.Drawing.Size(316, 22);
             this.dtpDataCompra.TabIndex = 3;
             // 
+            // lblDescPecas
+            // 
+            this.lblDescPecas.AutoSize = true;
+            this.lblDescPecas.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescPecas.ForeColor = System.Drawing.Color.Black;
+            this.lblDescPecas.Location = new System.Drawing.Point(18, 204);
+            this.lblDescPecas.Name = "lblDescPecas";
+            this.lblDescPecas.Size = new System.Drawing.Size(48, 19);
+            this.lblDescPecas.TabIndex = 62;
+            this.lblDescPecas.Text = "Preço";
+            // 
+            // txtDescPecas
+            // 
+            this.txtDescPecas.Location = new System.Drawing.Point(15, 226);
+            this.txtDescPecas.Multiline = true;
+            this.txtDescPecas.Name = "txtDescPecas";
+            this.txtDescPecas.Size = new System.Drawing.Size(629, 55);
+            this.txtDescPecas.TabIndex = 6;
+            // 
             // FrmCadPecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 266);
+            this.ClientSize = new System.Drawing.Size(656, 334);
+            this.Controls.Add(this.lblDescPecas);
+            this.Controls.Add(this.txtDescPecas);
             this.Controls.Add(this.dtpDataCompra);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -182,6 +206,7 @@
             this.Controls.Add(this.txtNomePecas);
             this.Controls.Add(this.panelTop);
             this.Name = "FrmCadPecas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCadPecas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTop.ResumeLayout(false);
@@ -203,5 +228,7 @@
         private System.Windows.Forms.TextBox txtNomePecas;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.DateTimePicker dtpDataCompra;
+        private System.Windows.Forms.Label lblDescPecas;
+        private System.Windows.Forms.TextBox txtDescPecas;
     }
 }

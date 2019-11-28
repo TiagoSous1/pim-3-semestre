@@ -16,7 +16,7 @@ namespace SistemaABCDAO.Repositories
 
         public TblPecasRepository()
         {
-            insert = "INSERT INTO PIM..TBL_PECA VALUES (@P0, @P1, @P2, @P3, @P4)";
+            insert = "INSERT INTO PIM..TBL_PECA VALUES (@P0, @P1, @P2, @P3, null)";
 
             delete = "DELETE FROM PIM..TBL_PECA WHERE ID_PIECE = @P0";
 
@@ -36,8 +36,8 @@ namespace SistemaABCDAO.Repositories
                     new SqlParameter("@P0", entity.price),
                     new SqlParameter("@P1", entity.descPiece),
                     new SqlParameter("@P2", entity.dtBuy),
-                    new SqlParameter("@P3", entity.dtStart),
-                    new SqlParameter("@P4", entity.dtFinish)
+                    new SqlParameter("@P3", entity.dtStart)
+
                 };
                 return ExecuteNonQuery(insert);
             }

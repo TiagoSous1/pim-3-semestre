@@ -9,18 +9,6 @@ namespace SistemaABCDAO.Entities
     public class TblAbastecimentoDAO
     {
 
-        /**
-         * 
-         * ID_SUPPLY	bigint
-         * COD_INVOICE	bigint
-         * ID_VEHICLE	bigint
-         * ID_COMPANY	bigint
-         * DT_SUPPLY	datetime
-         * PRICE	numeric
-         * 
-         * */
-
-
         public long? idSupply { get; set; }
         public long? codInvoice { get; set; }
         public long? idVehicle { get; set; }

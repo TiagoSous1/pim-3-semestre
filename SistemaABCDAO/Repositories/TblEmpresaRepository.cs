@@ -82,8 +82,12 @@ namespace SistemaABCDAO.Repositories
         {
             try
             {
+                parameters = new List<SqlParameter>
+                {
+                    new SqlParameter("@P0", idCompany)
+                };
                 var listTblEmpresa = new List<TblEmpresaDAO>();
-                var tableResult = ExecuteRead(select);
+                var tableResult = ExecuteRead(selected);
 
                 foreach (DataRow item in tableResult.Rows)
                 {

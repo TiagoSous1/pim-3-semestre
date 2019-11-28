@@ -49,11 +49,23 @@
     <Compile Include="Entities\OpenNewForm.cs" />
     <Compile Include="Entities\ValidaCNH.cs" />
     <Compile Include="Entities\ValidaDigitoCPF.cs" />
+    <Compile Include="ViewModel\Cadastros\FrmCadInfracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Cadastros\FrmCadInfracao.Designer.cs">
+      <DependentUpon>FrmCadInfracao.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Exibicao\FrmEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewModel\Exibicao\FrmEmpresa.Designer.cs">
       <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmInfracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewModel\Exibicao\FrmInfracao.Designer.cs">
+      <DependentUpon>FrmInfracao.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\Exibicao\FrmMotorista.cs">
       <SubType>Form</SubType>
@@ -198,8 +210,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewModel\Cadastros\FrmCadInfracao.resx">
+      <DependentUpon>FrmCadInfracao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewModel\Exibicao\FrmEmpresa.resx">
       <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewModel\Exibicao\FrmInfracao.resx">
+      <DependentUpon>FrmInfracao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModel\Exibicao\FrmMotorista.resx">
       <DependentUpon>FrmMotorista.cs</DependentUpon>

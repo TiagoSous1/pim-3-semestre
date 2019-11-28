@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\TblAbastecimentoModel.cs" />
     <Compile Include="Models\TblMultasModel.cs" />
     <Compile Include="Models\TblEmpresaModel.cs" />
     <Compile Include="Models\TblEnderecoModel.cs" />
+    <Compile Include="Models\TblInfracaoModel.cs" />
+    <Compile Include="Models\TblVeiculoModel.cs" />
     <Compile Include="Models\TblPecasModel.cs" />
     <Compile Include="Models\TblRoleModel.cs" />
     <Compile Include="Models\TblUsuarioModel.cs" />
